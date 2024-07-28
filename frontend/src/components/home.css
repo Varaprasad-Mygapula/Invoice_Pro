@@ -1,0 +1,47 @@
+.home-page {
+    text-align: center;
+    padding: 20px;
+    background-color: #f7f7f7;
+    color: #333;
+    font-family: Arial, sans-serif;
+  }
+  
+  .company-name {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .company-name h1 {
+    font-size: 2.5em;
+  }
+  
+  .introduction, .about-us, .services, .contact {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: left;
+  }
+  
+  .introduction h2, .about-us h2, .services h2, .contact h2 {
+    font-size: 1.5em;
+    color: #3498db;
+  }
+  
+  .footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .footer a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
