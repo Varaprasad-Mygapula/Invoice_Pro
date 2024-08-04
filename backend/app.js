@@ -1,77 +1,3 @@
-// const express = require('express');
-// const mongoose = require('mongoose');
-// const bodyParser = require('body-parser');
-
-// const app = express();
-// const port = process.env.PORT || 5000;
-
-// const cors = require('cors');
-
-// app.use(cors()); // Enable CORS for all routes
-
-// // ...rest of your server setup
-// app.use(bodyParser.json({ limit: '50mb' }));
-// // MongoDB connection
-// mongoose.connect('mongodb+srv://varaprasad:9ikphhpxTi8ZtJ8l@cluster0.ka5xp3a.mongodb.net/Cluster0?retryWrites=true&w=majority', {
-//   useNewUrlParser: true,
-//   useUnifiedTopology: true,
-// });
-
-// const invoiceSchema = new mongoose.Schema({
-//   billFrom: {
-//     name: String,
-//     email: String,
-//     address: String,
-//   },
-//   billTo: {
-//     name: String,
-//     email: String,
-//     address: String,
-//   },
-//   invoiceNumber: Number,
-//   dateOfIssue: String,
-//   items: [
-//     {
-//       name: String,
-//       description: String,
-//       price: Number,
-//       quantity: Number,
-//     },
-//   ],
-//   notes: String,
-//   currency: String,
-//   subTotal: Number,
-//   taxRate: Number,
-//   taxAmount: Number,
-//   discountRate: Number,
-//   discountAmount: Number,
-//   total: Number,
-//   // You can add more fields as needed
-// });
-
-// const Invoice = mongoose.model('Invoice', invoiceSchema);
-
-// app.use(bodyParser.json());
-
-// // Define a route to handle saving the invoice data
-// app.post('/invoice', (req, res) => {
-
-//   const invoiceData = req.body.invoiceData;
-//   console.log('Received invoice data:', invoiceData) // Access the invoice data correctly
-//   const invoice = new Invoice(invoiceData);
-
-//   invoice.save()
-//     .then(() => {
-//       res.status(200).send('Invoice data saved successfully.');
-//     })
-//     .catch((error) => {
-//       res.status(500).send('Failed to save invoice data: ' + error);
-//     });
-// });
-
-// app.listen(port, () => {
-//   console.log(`Server is running on port ${port}`);
-// });
 import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
@@ -186,31 +112,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// const token = jwt.sign({ userId: "someUserId" }, "your-secret-key", {
-//   expiresIn: "1h",
-// });
-// const authenticateToken = (req, res, next) => {
-//   const token = req.headers.authorization;
-//   console.log("Received Token:", token);
-
-//   if (!token) {
-//     return res.status(401).json({ error: "Unauthorized" });
-//   }
-
-//   try {
-//     const decodedToken = jwt.verify(token, "your-secret-key");
-//     req.userId = decodedToken.userId;
-//     next();
-//   } catch (error) {
-//     if (error.name === "TokenExpiredError") {
-//       return res.status(401).json({ error: "Token expired" });
-//     }
-//     console.error(error);
-//     res.status(401).json({ error: "Invalid token" });
-//   }
-// };
-
-// Remove token-related logic
 const authenticateToken = (req, res, next) => {
   // No token check, simply call next()
   next();
