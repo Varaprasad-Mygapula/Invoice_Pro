@@ -15,7 +15,7 @@ const Register = () => {
       password,
     };
     axios
-      .post("http://localhost:5000/register", obj)
+      .post("https://invoice-pro-backend.onrender.com/register", obj)
       .then(() => {
         console.log("Invoice data sent to MongoDB:", obj);
       })
@@ -26,12 +26,11 @@ const Register = () => {
   };
 
   return (
-  
     <div>
       <React.Fragment>
-			<Navbar/>
-		</React.Fragment>
-      
+        <Navbar />
+      </React.Fragment>
+
       <h1>Register</h1>
       <form onSubmit={handleRegister}>
         <label>

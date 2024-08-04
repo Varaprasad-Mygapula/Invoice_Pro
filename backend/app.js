@@ -228,6 +228,7 @@ app.post("/invoice", authenticateToken, async (req, res) => {
     .then(() => {
       res.status(200).send("Invoice data saved successfully.");
     })
+
     .catch((error) => {
       res.status(500).send("Failed to save invoice data: " + error);
     });

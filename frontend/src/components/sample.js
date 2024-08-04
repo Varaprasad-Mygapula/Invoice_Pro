@@ -7,7 +7,10 @@ export default function Auther() {
 
   const handleRegister = async () => {
     try {
-      await axios.post("http://localhost:5000/register", formData);
+      await axios.post(
+        "https://invoice-pro-backend.onrender.com/register",
+        formData
+      );
       alert("Registration successful");
     } catch (error) {
       alert("Registration failed");
@@ -17,7 +20,7 @@ export default function Auther() {
   const handleLogin = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/login",
+        "https://invoice-pro-backend.onrender.com/login",
         formData
       );
 

@@ -68,8 +68,8 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   border-radius: 20px;
-  border: 1px solid #ff4b2b;
-  background-color: #ff4b2b;
+  border: 1px solid #29335c; // Navy Blue border color
+  background-color: #29335c; // Navy Blue background color
   color: #ffffff;
   font-size: 12px;
   font-weight: bold;
@@ -84,17 +84,19 @@ export const Button = styled.button`
     outline: none;
   }
 `;
+
 export const GhostButton = styled(Button)`
   background-color: transparent;
   border-color: #ffffff;
 `;
 
 export const Anchor = styled.a`
-  color: #333;
+  color: #29335c; // Navy Blue color
   font-size: 14px;
   text-decoration: none;
   margin: 15px 0;
 `;
+
 export const OverlayContainer = styled.div`
   position: absolute;
   top: 0;
@@ -109,9 +111,17 @@ export const OverlayContainer = styled.div`
 `;
 
 export const Overlay = styled.div`
-  background: #ff416c;
-  background: -webkit-linear-gradient(to right, #ff4b2b, #ff416c);
-  background: linear-gradient(to right, #ff4b2b, #ff416c);
+  background: #29335c; // Navy Blue
+  background: -webkit-linear-gradient(
+    to right,
+    #29335c,
+    #3498db
+  ); // Navy Blue to Sky Blue gradient
+  background: linear-gradient(
+    to right,
+    #29335c,
+    #3498db
+  ); // Navy Blue to Sky Blue gradient
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0 0;
@@ -157,4 +167,5 @@ export const Paragraph = styled.p`
   line-height: 20px;
   letter-spacing: 0.5px;
   margin: 20px 0 30px;
+  color: #ffffff; // White color
 `;

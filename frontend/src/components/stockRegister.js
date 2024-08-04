@@ -7,10 +7,12 @@ const StockRegister = () => {
   let [records, setRecords] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/getinvoice").then((response) => {
-      console.log(response.data.recorddata);
-      setRecords(response.data.recorddata);
-    });
+    axios
+      .get("https://invoice-pro-backend.onrender.com/getinvoice")
+      .then((response) => {
+        console.log(response.data.recorddata);
+        setRecords(response.data.recorddata);
+      });
   }, []);
 
   useEffect(() => {
@@ -27,7 +29,7 @@ const StockRegister = () => {
   const handleDelete = (id) => {
     console.log(id);
     axios
-      .delete("http://localhost:5000/deleteRecord/" + id)
+      .delete("https://invoice-pro-backend.onrender.com/deleteRecord/" + id)
       .then((res) => {
         console.log(res);
         alert("data is deleted successfully");

@@ -13,8 +13,9 @@ const sendInvoiceToMongoDB = (info) => {
   console.log("Clean Invoice Data:", info);
 
   //Send a POST request to your server to save the data
+
   axios
-    .post("http://localhost:5000/invoice", info)
+    .post("https://invoice-pro-backend.onrender.com/invoice", info)
     .then((response) => {
       console.log("Invoice data sent to MongoDB:", info);
       // You can handle success here, e.g., show a success message to the user

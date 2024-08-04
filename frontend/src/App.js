@@ -55,6 +55,10 @@ class App extends Component {
         <div className="App d-flex flex-column align-items-center justify-content-center w-100">
           <div className="container-fluid">
             <Routes>
+              <Route
+                path="/Varaprasad-Mygapula/Invoice_Pro"
+                element={<Home />}
+              />
               <Route path="/" element={<Home />} />
               <Route path="/login" element={<Login />} />
               <Route path="/logout" element={<Logout />} />
